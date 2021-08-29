@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Temperature by jaber</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://openweathermap.org/technology -->
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="inputField" type="text" class="form-control" placeholder="Enter a City Name">
+                <div class="input-group-append">
+                    <button onclick="searchUpdate()" type="button" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="weather-details">
+
+        </div>
+    </div>
+
+    <!-- Error message when no input value-->
+    <div style="display: none;" id="error-message">
+        <p>Please insert City name</p>
+    </div>
+    <!-- Error message when not match with search-->
+    <div style="display: none;" id="error-not-found">
+        <p>Please, Enter a valid City Name</p>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
