@@ -3,7 +3,8 @@ function searchUpdate(){
     const inputField = document.getElementById('inputField');
     const inputValue = inputField.value;
     inputField.value = '';
-    
+    document.getElementById('weather-details').textContent = '';
+    document.getElementById('error-not-found').style.display = 'none';
     document.getElementById('error-message').style.display = 'none';
     if(inputValue <= 0){
         document.getElementById('error-message').style.display = 'block';
@@ -33,6 +34,7 @@ function displayWeather(weather){
         <h1>${weather.sys.country}</h1>
         <h1>${weather.name}</h1>
         <h3><span>${weather.main.temp}</span>&deg;C</h3>
+        <h3>${weather.weather[0].main}</h3>
     </div>`;
     weatherDetails.appendChild(div);
 }
